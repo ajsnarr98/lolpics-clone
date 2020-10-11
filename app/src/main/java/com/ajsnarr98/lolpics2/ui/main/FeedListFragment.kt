@@ -4,18 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.ajsnarr98.lolpics2.R
+import com.ajsnarr98.lolpics2.databinding.FragmentFeedListBinding
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class PlaceholderFragment : Fragment() {
+class FeedListFragment : Fragment() {
 
     private lateinit var pageViewModel: PageViewModel
+    private lateinit var binding: FragmentFeedListBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,12 +28,11 @@ class PlaceholderFragment : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_main, container, false)
-        val textView: TextView = root.findViewById(R.id.section_label)
-        pageViewModel.text.observe(this, Observer<String> {
-            textView.text = it
-        })
-        return root
+        binding = FragmentFeedListBinding.inflate(inflater, container, false)
+
+
+
+        return binding.root
     }
 
     companion object {
@@ -43,13 +42,15 @@ class PlaceholderFragment : Fragment() {
          */
         private const val ARG_SECTION_NUMBER = "section_number"
 
+//        private const val NEWEST_NUMBER
+
         /**
          * Returns a new instance of this fragment for the given section
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
-            return PlaceholderFragment().apply {
+        fun newInstance(sectionNumber: Int): FeedListFragment {
+            return FeedListFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

@@ -7,6 +7,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
 
+    buildFeatures.viewBinding = true
+
     defaultConfig {
         applicationId "com.ajsnarr98.lolpics2"
         minSdkVersion 16

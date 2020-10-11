@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="TextAppearance.LOLPics.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/yellow_accent</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
     <style name="TextAppearance.LOLPics.Headline4" parent="TextAppearance.MaterialComponents.Headline4">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">22sp</item>
