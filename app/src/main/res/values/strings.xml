@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">LOL Pics</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_1">NEWEST</string>
+    <string name="tab_text_2">POPULAR</string>
+    <string name="tab_text_3">RANDOM</string>
 </resources>
